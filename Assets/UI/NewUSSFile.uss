@@ -1,0 +1,50 @@
+VisualElement {
+}
+
+.title {
+    -unity-font-definition: url("project://database/Assets/Gentleland/SteampunkUI/Fonts/Arvo/Arvo%20SDF%201.asset?fileID=11400000&guid=d576de03d6a1eb04ebc2295085ef8b4e&type=2#Arvo SDF 1");
+    -unity-text-align: middle-center;
+    font-size: 55px;
+    text-shadow: 20px 20px 0 rgb(0, 0, 0);
+    margin-top: 5%;
+    color: rgb(113, 84, 72);
+}
+
+.unity-button {
+    -unity-font-definition: url("project://database/Assets/UI/ethnocentric%20rg%20it%20SDF.asset?fileID=11400000&guid=a5d1274f6aaf6144eb1ee7322ea2984f&type=2#ethnocentric rg it SDF");
+    font-size: 30px;
+    -unity-text-align: middle-center;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(172, 157, 157);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    border-top-color: rgba(255, 255, 255, 0);
+    border-bottom-color: rgba(255, 255, 255, 0);
+}
+
+.unity-button:hover {
+    -unity-font-definition: url("project://database/Assets/UI/ethnocentric%20rg%20it%20SDF.asset?fileID=11400000&guid=a5d1274f6aaf6144eb1ee7322ea2984f&type=2#ethnocentric rg it SDF");
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+
+.unity-text-field__background {
+    background-image: url("project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Buttons_1.png?fileID=-8620180257736979365&guid=9291b39306d4ce640bf255c16c6ddf5b&type=3#Steampunk_UI_Buttons_1_0");
+    flex-grow: 0;
+    flex-shrink: 1;
+    opacity: 1;
+    background-color: rgb(56, 56, 56);
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.unity-text-field {
+    background-image: url("project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Buttons_3.png?fileID=-7632156641727129564&guid=c164cff5d531b924cab23980fd978595&type=3#Steampunk_UI_Buttons_3_0");
+    -unity-background-scale-mode: stretch-to-fill;
+    white-space: nowrap;
+    -unity-text-align: middle-left;
+    flex-grow: 0;
+    -unity-background-image-tint-color: rgb(56, 56, 56);
+}

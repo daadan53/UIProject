@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 70bfc151d164df04cb4fc42c15795b93
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _EmptyFieldTemplate: {fileID: 9197481963319205126, guid: 6558ea750951777428da7b69a862dd9f, type: 3}
+  - _EmptyFieldMail: {fileID: 9197481963319205126, guid: cf8be4f41bd0f644baaf12de22210fc0, type: 3}
+  - _EmptyFieldMdp: {fileID: 9197481963319205126, guid: 18d54438d5f63ff47bb3cf7fb30ead34, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
