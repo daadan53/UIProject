@@ -31,20 +31,12 @@ VisualElement {
     transition-timing-function: ease-in;
 }
 
-.unity-text-field__background {
-    background-image: url("project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Buttons_1.png?fileID=-8620180257736979365&guid=9291b39306d4ce640bf255c16c6ddf5b&type=3#Steampunk_UI_Buttons_1_0");
-    flex-grow: 0;
-    flex-shrink: 1;
-    opacity: 1;
-    background-color: rgb(56, 56, 56);
-    -unity-background-scale-mode: stretch-to-fill;
+#unity-text-input {
+    background-image: url("project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Dialogue_3.png?fileID=7476374876614729092&guid=44a8b76b70d48db4aa2dcac3eb64eb88&type=3#Steampunk_UI_Dialogue_3_5");
+    margin-left: 2px;
 }
 
-.unity-text-field {
-    background-image: url("project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Buttons_3.png?fileID=-7632156641727129564&guid=c164cff5d531b924cab23980fd978595&type=3#Steampunk_UI_Buttons_3_0");
-    -unity-background-scale-mode: stretch-to-fill;
-    white-space: nowrap;
-    -unity-text-align: middle-left;
-    flex-grow: 0;
-    -unity-background-image-tint-color: rgb(56, 56, 56);
+#unity-text-input TextElement {
+    background-image: url("project://database/Assets/Gentleland/SteampunkUI/Art/Steampunk_UI_Dialogue_3.png?fileID=5185045578303202313&guid=44a8b76b70d48db4aa2dcac3eb64eb88&type=3#Steampunk_UI_Dialogue_3_3");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
 }
