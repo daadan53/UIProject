@@ -33,6 +33,7 @@ public class UI_Mana : MonoBehaviour
         _InputMail = _Root.Q<TextField>("inputMail");
         _InputPass = _Root.Q<TextField>("inputPass");
 
+        //_PanelEmptyField.AddToClassList("invisible"); // Ajoute le selecteur dans 
         //labelMailMdp = _EmptyFieldTemplate.Q<Label>("Mail et Mdp");
 
         timerDestroy = false;
@@ -80,53 +81,43 @@ public class UI_Mana : MonoBehaviour
     // Méthode pour tester la barre de progrès et instancier
     public void TestEmptyField()
     {
-        // Il manque adresse mail, et mdp
-        if(_InputMail.value == "" && _InputPass.value == "")
+        switch ((_InputMail.value, _InputPass.value))
         {
-            // Supprimer les instance de template container s'il y en a 
-            if(templateContainer != null)
-            {
-                templateContainer = null;
-                
-            }
+            // Il manque adresse mail, et mdp
+            case ("", ""):
+                if (templateContainer != null)
+                {
+                    templateContainer = null;
+                }
+                templateContainer = _EmptyFieldTemplate.Instantiate(); // Instancier un champ avec le texte du panel
+                _PanelEmptyField.Add(templateContainer); // Ajouter au panel pour l'affichage
+                break;
 
-            templateContainer = _EmptyFieldTemplate.Instantiate(); // On instancie un champs qui aura le text du panel 
-            _PanelEmptyField.Add(templateContainer); // On l'ajoute au panel de droiye pour l'afficher
+            // Il manque seulement l'adresse mail
+            case ("", _):
+                if (templateContainer != null)
+                {
+                    templateContainer = null;
+                }
+                templateContainer = _EmptyFieldMail.Instantiate(); // Instancier un champ pour l'adresse mail manquante
+                _PanelEmptyField.Add(templateContainer);
+                break;
 
-            //Debug.Log(_InputMail.value);
-        }
-        //IL manque adresse mail seulement
-        else if(_InputMail.value == "")
-        {
-            // Supprimer les instance s'il y en a 
-            if(templateContainer != null)
-            {
-                templateContainer = null;
-            }
+            // Il manque seulement le mdp
+            case (_, ""):
+                if (templateContainer != null)
+                {
+                    templateContainer = null;
+                }
+                templateContainer = _EmptyFieldMdp.Instantiate(); // Instancier un champ pour le mdp manquant
+                _PanelEmptyField.Add(templateContainer);
+                break;
 
-            
-            templateContainer = _EmptyFieldMail.Instantiate(); // On instancie un champs qui aura le text du panel 
-            _PanelEmptyField.Add(templateContainer);
-
-        }
-        //Il manque seulement le mdp
-        else if(_InputPass.value == "")
-        {
-            // Supprimer les instance s'il y en a 
-            if(templateContainer != null)
-            {
-                templateContainer = null;
-            }
-
-            
-            templateContainer = _EmptyFieldMdp.Instantiate(); // On instancie un champs qui aura le text du panel 
-            _PanelEmptyField.Add(templateContainer);
-
-        }
-        else
-        {
-            Destroy(gameObject);
-            Debug.Log("C'est réussi !");
+            // Les deux champs sont remplis
+            default:
+                Destroy(gameObject);
+                Debug.Log("C'est réussi !");
+                break;
         }
         
     }
